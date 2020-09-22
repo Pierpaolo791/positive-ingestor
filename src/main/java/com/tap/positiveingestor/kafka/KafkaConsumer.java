@@ -12,7 +12,7 @@ public class KafkaConsumer {
 	@KafkaListener(topics = "telegram-action")
 	public void consume(String message) throws IOException {
 		CompletableFuture<Void> action = CompletableFuture.runAsync(
-				() -> System.out.println("Esegue un azione nel bot telegram. " +message)
+				() -> System.out.println("Esegue un azione nel bot telegram e consuma il messaggio. " +message)
 				);
 	}
 	
