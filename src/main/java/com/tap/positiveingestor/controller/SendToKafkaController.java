@@ -15,7 +15,7 @@ public class SendToKafkaController {
 	@Autowired
 	private KafkaProducer kafkaProducer; 
 	
-	@PostMapping("/send/{topic}")
+	@PostMapping("/{topic}")
 	public boolean send(@PathVariable String topic, String message) {
 		kafkaProducer.produce(topic, message);
 		return true; 

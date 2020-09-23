@@ -17,7 +17,7 @@ public class ConsumeToKafkaController {
 	@Autowired
 	private KafkaConsumer kafkaConsumer;
 	
-	@PostMapping("/send/{topic}")
+	@PostMapping("/{topic}")
 	public void send(@PathVariable String topic) {
 		try {
 			kafkaConsumer.consume(topic);
