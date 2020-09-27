@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tap.positiveingestor.kafka.KafkaConsumer;
+import com.tap.positiveingestor.model.Message;
 
 @RestController
 @RequestMapping("/api/v1/recive")
@@ -17,13 +18,6 @@ public class ConsumeToKafkaController {
 	@Autowired
 	private KafkaConsumer kafkaConsumer;
 	
-	@PostMapping("/{topic}")
-	public void send(@PathVariable String topic) {
-		try {
-			kafkaConsumer.consume(topic);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+	
 	
 }
