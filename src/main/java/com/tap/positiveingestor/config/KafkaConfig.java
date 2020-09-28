@@ -15,7 +15,7 @@ public class KafkaConfig {
     
     @Value(value = "${spring.kafka.bootstrapAddress}")
     private String bootstrapAddress;
- 
+    
     @Bean
     public KafkaAdmin kafkaAdmin() {
         Map<String, Object> configs = new HashMap<>();
@@ -27,4 +27,5 @@ public class KafkaConfig {
     public NewTopic beanNewTopicTelegramAction() {
          return new NewTopic("telegram-action", 1, (short) 1);
     }
+    
 }

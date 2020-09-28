@@ -14,10 +14,10 @@ import com.tap.positiveingestor.model.Message;
 @RestController
 @RequestMapping("/api/v1/recive")
 public class ConsumeToKafkaController {
-
+	/*
 	@Autowired
 	private KafkaConsumer kafkaConsumer;
-	
+	*/
 	
 	
 }
