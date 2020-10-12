@@ -27,5 +27,9 @@ public class KafkaConfig {
     public NewTopic beanNewTopicTelegramAction() {
          return new NewTopic("telegram-action", 1, (short) 1);
     }
+    @Bean
+    public NewTopic beanNewTopicTelegramMessage() {
+         return new NewTopic("telegram-message", 1, (short) 1);
+    }
     
 }

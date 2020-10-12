@@ -14,7 +14,7 @@ public class PositiveIngestorApplication {
 	}
 	
 	@Bean
-	private ActionsList beanActionList() {
+	public ActionsList beanActionList() {
 		return new ActionsList(); 
 	}
 
