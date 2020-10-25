@@ -21,10 +21,4 @@ public class SendToKafkaController {
 		kafkaProducer.produce("telegram-message", message);
 		return true; 
 	}
-	@PostMapping("/telegram-action") // REMOVE THIS
-	public boolean sendAction(@RequestBody Message message) { // REMOVE THIS
-		kafkaProducer.produce("telegram-action", message); // REMOVE THIS
-		return true;  // REMOVE THIS
-	}
-	
 }

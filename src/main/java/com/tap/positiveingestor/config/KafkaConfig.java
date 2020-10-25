@@ -23,11 +23,11 @@ public class KafkaConfig {
         return new KafkaAdmin(configs);
     }
     
-    @Bean
+    @Bean("telegram-action")
     public NewTopic beanNewTopicTelegramAction() {
          return new NewTopic("telegram-action", 1, (short) 1);
     }
-    @Bean
+    @Bean("telegram-message")
     public NewTopic beanNewTopicTelegramMessage() {
          return new NewTopic("telegram-message", 1, (short) 1);
     }
